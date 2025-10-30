@@ -1,8 +1,10 @@
+import random
+
 class Character:
     def __init__(self, name, hp, attack_power):
         self.name = name
         self.hp = hp
-        self.attack_power = attack_power
+        self.attack_power = attack_power * random.uniform(0.3, 0.9)
 
     def attack(self, other):
         other.hp -= self.attack_power
